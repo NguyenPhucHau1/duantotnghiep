@@ -3,7 +3,6 @@ import React from 'react';
 import { Line } from 'react-chartjs-2'; // Change to Line chart
 import { Chart, registerables } from 'chart.js'; // Import Chart and registerables
 import Layout from "@/app/components/admin/Layout";
-import styles from './ThongKe.module.css'; // CSS module for styling
 import '../globals.css';
 import '../admin_header.css'; // Import global styles
 

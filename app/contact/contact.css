@@ -1,0 +1,240 @@
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+
+  .banner-contact-top {
+    max-width: 100%;
+    max-height: 250px;
+    margin: 20px 0;
+
+    img {
+      max-height: 250px;
+      object-fit: fill;
+      border: none;
+    }
+  }
+  .banner-contact-bottom {
+    max-width: 100%;
+    max-height: 250px;
+    margin: 20px 0;
+
+    img {
+      max-height: 250px;
+      object-fit: fill;
+      border: none;
+    }
+  }
+
+  .getInTouch {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between columns */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+
+    .from-getIntouch {
+      flex: 1;
+      margin-right: 20px;
+      background-color: #020817;
+      border: 1px solid rgb(209, 209, 209);
+      padding: 20px;
+      border-radius: 15px;
+      color: rgb(209, 209, 209);
+      min-width: 300px; /* Minimum width for better responsiveness */
+
+      .title-from {
+        margin-left: 24px;
+        color: #fff;
+
+        h3 {
+          font-size: 24px;
+          font-weight: bold;
+        }
+
+        h1 {
+          font-size: 32px;
+        }
+      }
+
+      form {
+        display: flex; /* Use flexbox for the form */
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Align items to the start */
+        margin: 0;
+
+        label {
+          align-self: flex-start;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          margin-left: 24px;
+          font-size: 16px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+          width: 90%;
+          padding: 10px;
+          margin-bottom: 10px;
+          background-color: #020817;
+          border: 1px solid #ccc;
+          border-radius: 15px;
+        }
+
+        textarea {
+          height: 150px;
+          margin-bottom: 30px;
+          color: #fff;
+          background-color: #020817;
+        }
+
+        button {
+          padding: 10px 20px;
+          border: 2px solid #fff;
+          border-radius: 15px;
+          background: linear-gradient(to top right, #ffcccc 0%, #ff0000 100%);
+          width: 90%;
+          height: 40px;
+          color: white;
+          cursor: pointer;
+          transition: background 0.3s;
+        }
+
+        button:hover {
+          background: linear-gradient(to bottom left, #ffcccc 0%, #ff0000 100%);
+        }
+
+        button:active {
+          background: #777777;
+        }
+      }
+    }
+
+    .contact-infor {
+      flex: 1; /* Chiếm không gian linh hoạt */
+      background-color: rgba(26, 26, 26, 0.2); /* Nền với độ trong suốt nhẹ */
+      padding: 20px; /* Khoảng cách bên trong */
+      border-radius: 12px; /* Góc bo tròn */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Đổ bóng */
+      transition: box-shadow 0.3s ease, transform 0.3s ease; /* Hiệu ứng hover */
+
+      &:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+        transform: translateY(-5px); /* Hiệu ứng nổi lên */
+      }
+
+      .icon-infor {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+
+        .icon {
+          font-weight: 600;
+          text-align: center;
+          color: #ffffff;
+          background-color: #282828;
+          padding: 10px;
+          border-radius: 8px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          transition: background-color 0.3s ease, transform 0.3s ease;
+
+          &:hover {
+            background-color: #3b3b3b;
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+
+    .map {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .map iframe {
+      margin-top: 40px;
+      width: 100%;
+      height: 400px;
+      border: 0;
+    }
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 868px) {
+    .contact-banner {
+      width: 100%;
+      height: 150px;
+      img {
+        height: 150px;
+      }
+    }
+
+    .getInTouch {
+      flex-direction: column; /* Stack columns vertically */
+      .from-getIntouch {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 20px; /* Add margin below */
+      }
+    }
+
+    .contact-infor .icon-infor {
+      grid-template-columns: 1fr; /* Stack icons vertically on smaller screens */
+    }
+    .map iframe {
+      max-width: 100%;
+      height: 600px;
+    }
+  }
+  @media (max-width: 762px) {
+    .banner-contact-top {
+      width: 100%;
+      img {
+        height: 130px; /* Điều chỉnh chiều cao cho hình ảnh */
+      }
+    }
+
+    .banner-contact-bottom {
+      width: 100%;
+      height: 130px; /* Điều chỉnh chiều cao cho banner dưới */
+      img {
+        height: 130px; /* Điều chỉnh chiều cao cho hình ảnh */
+      }
+    }
+
+    .getInTouch {
+      flex-direction: column; /* Cột xếp dọc */
+      .from-getIntouch {
+        margin-right: 0; /* Bỏ margin bên phải */
+        margin-bottom: 15px; /* Thêm khoảng cách phía dưới */
+      }
+    }
+
+    .contact-infor {
+      margin-bottom: 15px; /* Điều chỉnh khoảng cách bên dưới */
+    }
+
+    .contact-infor .icon-infor {
+      grid-template-columns: 1fr; /* Biểu tượng xếp dọc */
+    }
+
+    .map iframe {
+      max-width: 100%; /* Đảm bảo khung iframe không vượt quá chiều rộng */
+    }
+  }
+  @media (max-width: 452px) {
+    .icon-infor {
+      flex-direction: column; /* Xếp theo cột */
+      align-items: flex-start; /* Căn trái các phần tử */
+    }
+
+    .icon {
+      display: flex; /* Căn chỉnh icon và nội dung */
+      flex-direction: column; /* Nội dung bên trong cũng theo cột */
+      gap: 5px; /* Khoảng cách giữa các dòng */
+    }
+  }
+}
